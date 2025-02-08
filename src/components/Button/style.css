@@ -1,0 +1,81 @@
+.do-button {
+    --do-button-font-weight: var(--do-font-weight-primary);
+    --do-button-border-color: var(--do-border-color);
+    --do-button-bg-color: var(--do-fill-color-blank);
+    --do-button-text-color: var(--do-text-color-regular);
+    --do-button-disabled-text-color: var(--do-disabled-text-color);
+    --do-button-disabled-bg-color: var(--do-fill-color-blank);
+    --do-button-disabled-border-color: var(--do-border-color-light);
+    --do-button-hover-text-color: var(--do-color-primary);
+    --do-button-hover-bg-color: var(--do-color-primary-light-9);
+    --do-button-hover-border-color: var(--do-color-primary-light-7);
+    --do-button-active-text-color: var(--do-button-hover-text-color);
+    --do-button-active-border-color: var(--do-color-primary);
+    --do-button-active-bg-color: var(--do-button-hover-bg-color);
+    --do-button-outline-color: var(--do-color-primary-light-5);
+    --do-button-active-color: var(--vk-text-color-primary);
+}
+@each $val in primary, success, warning, info, danger {
+    .do-button--$(val) {
+        --do-button-text-color: var(--do-color-white);
+        --do-button-bg-color: var(--do-color-$(val));
+        --do-button-border-color: var(--do-color-$(val));
+        --do-button-outline-color: var(--do-color-$(val)-light-5);
+        --do-button-active-color: var(--do-color-$(val)-dark-2);
+        --do-button-hover-text-color: var(--do-color-white);
+        --do-button-hover-bg-color: var(--do-color-$(val)-light-3);
+        --do-button-hover-border-color: var(--do-color-$(val)-light-3);
+        --do-button-active-bg-color: var(--do-color-$(val)-dark-2);
+        --do-button-active-border-color: var(--do-color-$(val)-dark-2);
+        --do-button-disabled-text-color: var(--do-color-white);
+        --do-button-disabled-bg-color: var(--do-color-$(val)-light-5);
+        --do-button-disabled-border-color: var(--do-color-$(val)-light-5);
+    }
+    .do-button--$(val).is-plain {
+        --do-button-text-color: var(--do-color-$(val));
+        --do-button-bg-color: var(--do-color-$(val)-light-9);
+        --do-button-border-color: var(--do-color-$(val)-light-5);
+        --do-button-hover-text-color: var(--do-color-white);
+        --do-button-hover-bg-color: var(--do-color-$(val));
+        --do-button-hover-border-color: var(--do-color-$(val));
+        --do-button-active-text-color: var(--do-color-white);
+    }
+}
+.do-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    box-sizing: border-box;
+    padding: 8px 15px;
+    font-size: 1;
+    background-color: var(--do-button-bg-color);
+    border: var(--do-border);
+    border-radius: var(--do-border-radius-base);
+    border-color: var(--do-button-border-color);
+    color: var(--do-button-text-color);
+    font-weight: (--do-button-font-weight);
+    cursor: pointer;
+    & + & {
+        margin-left: 12px;
+    }
+    &:hover {
+        color: var(--do-button-hover-text-color);
+        border-color: var(--do-button-hover-border-color);
+        background-color: var(--do-button-hover-bg-color);
+    }
+    &:active {
+        color: var(--do-button-active-text-color);
+        border-color: var(--do-button-active-border-color);
+        background-color: var(--do-button-active-bg-color);
+    }
+    &:disabled {
+        color: var(--do-button-disabled-text-color);
+        background-color: var(--do-button-disabled-bg-color);
+        border-color: var(--do-button-disabled-border-color);
+        cursor: not-allowed;
+    }
+    [class*="do-icon"] + span {
+        margin-left: 6px;
+    }
+}

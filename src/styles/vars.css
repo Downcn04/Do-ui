@@ -1,0 +1,98 @@
+:root {
+    /* colors */
+    --do-color-white: #ffffff;
+    --do-color-black: #000000;
+    --colors: (primary: #409eff, success: #67c23a, warning: #e6a23c, danger: #f56c6c, info: #909399);
+
+    --do-color-primary: #409eff;
+    --do-color-primary-light-3: #a6c8ff; /* 手动计算的颜色值 */
+    --do-color-primary-light-5: #cce4ff; /* 手动计算的颜色值 */
+    --do-color-primary-light-7: #e6f2ff; /* 手动计算的颜色值 */
+    --do-color-primary-light-9: #f2f9ff; /* 手动计算的颜色值 */
+    --do-color-primary-light-8: #f0f7ff; /* 手动计算的颜色值 */
+    --do-color-primary-dark-2: #204880; /* 手动计算的颜色值 */
+
+    --do-color-success: #67c23a;
+    --do-color-success-light-3: #a8e07a; /* 手动计算的颜色值 */
+    --do-color-success-light-5: #cceeb2; /* 手动计算的颜色值 */
+    --do-color-success-light-7: #e6f7d9; /* 手动计算的颜色值 */
+    --do-color-success-light-9: #f2fbe9; /* 手动计算的颜色值 */
+    --do-color-success-light-8: #f0fbe4; /* 手动计算的颜色值 */
+    --do-color-success-dark-2: #33661d; /* 手动计算的颜色值 */
+
+    --do-color-warning: #e6a23c;
+    --do-color-warning-light-3: #f3c27a; /* 手动计算的颜色值 */
+    --do-color-warning-light-5: #f8d4a6; /* 手动计算的颜色值 */
+    --do-color-warning-light-7: #fcead9; /* 手动计算的颜色值 */
+    --do-color-warning-light-9: #fef5ec; /* 手动计算的颜色值 */
+    --do-color-warning-light-8: #fef2e4; /* 手动计算的颜色值 */
+    --do-color-warning-dark-2: #734d1e; /* 手动计算的颜色值 */
+
+    --do-color-danger: #f56c6c;
+    --do-color-danger-light-3: #f9a3a3; /* 手动计算的颜色值 */
+    --do-color-danger-light-5: #fbc8c8; /* 手动计算的颜色值 */
+    --do-color-danger-light-7: #fde4e4; /* 手动计算的颜色值 */
+    --do-color-danger-light-9: #fef2f2; /* 手动计算的颜色值 */
+    --do-color-danger-light-8: #fef0f0; /* 手动计算的颜色值 */
+    --do-color-danger-dark-2: #7a3636; /* 手动计算的颜色值 */
+
+    --do-color-info: #909399;
+    --do-color-info-light-3: #b3b5b8; /* 手动计算的颜色值 */
+    --do-color-info-light-5: #d1d2d4; /* 手动计算的颜色值 */
+    --do-color-info-light-7: #e8e8e9; /* 手动计算的颜色值 */
+    --do-color-info-light-9: #f4f4f5; /* 手动计算的颜色值 */
+    --do-color-info-light-8: #f2f2f3; /* 手动计算的颜色值 */
+    --do-color-info-dark-2: #48494c; /* 手动计算的颜色值 */
+
+    --do-bg-color: #ffffff;
+    --do-bg-color-page: #f2f3f5;
+    --do-bg-color-overlay: #ffffff;
+    --do-text-color-primary: #303133;
+    --do-text-color-regular: #606266;
+    --do-text-color-secondary: #909399;
+    --do-text-color-placeholder: #a8abb2;
+    --do-text-color-disabled: #c0c4cc;
+    --do-border-color: #dcdfe6;
+    --do-border-color-light: #e4e7ed;
+    --do-border-color-lighter: #ebeef5;
+    --do-border-color-extra-light: #f2f6fc;
+    --do-border-color-dark: #d4d7de;
+    --do-border-color-darker: #cdd0d6;
+    --do-fill-color: #f0f2f5;
+    --do-fill-color-light: #f5f7fa;
+    --do-fill-color-lighter: #fafafa;
+    --do-fill-color-extra-light: #fafcff;
+    --do-fill-color-dark: #ebedf0;
+    --do-fill-color-darker: #e6e8eb;
+    --do-fill-color-blank: #ffffff;
+
+    /* border */
+    --do-border-width: 1px;
+    --do-border-style: solid;
+    --do-border-color-hover: var(--do-text-color-disabled);
+    --do-border: var(--do-border-width) var(--do-border-style) var(--do-border-color);
+    --do-border-radius-base: 4px;
+    --do-border-radius-small: 2px;
+    --do-border-radius-round: 20px;
+    --do-border-radius-circle: 100%;
+
+    /*font*/
+    --do-font-size-extra-large: 20px;
+    --do-font-size-large: 18px;
+    --do-font-size-medium: 16px;
+    --do-font-size-base: 14px;
+    --do-font-size-small: 13px;
+    --do-font-size-extra-small: 12px;
+    --do-font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+        "\5fae\8f6f\96c5\9ed1", Arial, sans-serif;
+    --do-font-weight-primary: 500;
+
+    /*disabled*/
+    --do-disabled-bg-color: var(--do-fill-color-light);
+    --do-disabled-text-color: var(--do-text-color-placeholder);
+    --do-disabled-border-color: var(--do-border-color-light);
+
+    /*animation*/
+    --do-transition-duration: 0.3s;
+    --do-transition-duration-fast: 0.2s;
+}

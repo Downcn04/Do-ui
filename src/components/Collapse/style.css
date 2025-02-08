@@ -1,0 +1,52 @@
+.do-collapse {
+    --do-collapse-border-color: var(--do-border-color-light);
+    --do-collapse-header-height: 48px;
+    --do-collapse-header-bg-color: var(--do-fill-color-blank);
+    --do-collapse-header-text-color: var(--do-text-color-primary);
+    --do-collapse-header-font-size: 13px;
+    --do-collapse-content-bg-color: var(--do-fill-color-blank);
+    --do-collapse-content-font-size: 13px;
+    --do-collapse-content-text-color: var(--do-text-color-primary);
+    --do-collapse-disabled-text-color: var(--do-disabled-text-color);
+    --do-collapse-disabled-border-color: var(--do-border-color-lighter);
+    border-top: 1px solid var(--do-collapse-border-color);
+    border-bottom: 1px solid var(--do-collapse-border-color);
+}
+.do-collapse-item_header {
+    cursor: pointer;
+    justify-content: space-between;
+    height: var(--do-collapse-header-height);
+    display: flex;
+    align-items: center;
+    color: var(--do-collapse-header-text-color);
+    background-color: var(--do-collapse-header-bg-color);
+    font-size: var(--do-collapse-header-font-size);
+    padding: 0 16px;
+    border-bottom: 1px solid var(--do-collapse-border-color);
+    transition: border-bottom-color var(--do-transition-duration);
+    &.is-active {
+        border-bottom-color: transparent;
+        .header_angle {
+            transform: rotate(90deg);
+        }
+    }
+    &.is-disabled {
+        color: var(--do-collapse-disabled-text-color);
+        border-bottom-color: var(--do-collapse-disabled-border-color);
+        cursor: not-allowed;
+    }
+}
+.header_angle {
+    transition: transform var(--do-transition-duration);
+}
+.do-collapse-item_content {
+    padding: 3px 16px 16px;
+    background-color: var(--do-collapse-content-bg-color);
+    font-size: var(--do-collapse-content-font-size);
+    color: var(--do-collapse-content-text-color);
+    transition: border-bottom-color var(--do-transition-duration);
+}
+.slider-enter-active,
+.slider-leave-active {
+    transition: height var(--do-transition-duration);
+}

@@ -1,0 +1,104 @@
+{
+  "name": "@downcn/do-ui",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A Vue 3 UI library",
+  "author": "Downcn",
+  "license": "MIT",
+  "homepage": "https://github.com/Downcn04/Downcn-ui",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Downcn04/Downcn-ui"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "ui",
+    "component",
+    "library"
+  ],
+  "sideEffects": [
+    "dist/index.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/types/do-ui.d.ts",
+      "import": "./dist/es/do-ui.js",
+      "require": "./dist/umd/do-ui.umd.cjs"
+    },
+    "./dist/*.css": {
+      "import": "./dist/*.css",
+      "require": "./dist/*.css"
+    }
+  },
+  "main": "./dist/es/do-ui.umd.cjs",
+  "module": "./dist/umd/do-ui.js",
+  "types": "./dist/types/do-ui.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run build-only && npm run move-style",
+    "preview": "vite preview",
+    "build-only": "run-p build-es build-umd",
+    "build-es": "vite build --config vite.es.config.ts",
+    "build-umd": "vite build --config vite.umd.config.ts",
+    "type-check": "vue-tsc --build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "vitest",
+    "commit": "git-cz",
+    "move-style": "move-file dist/es/index.css dist/index.css",
+    "prepublishOnly": "npm run build"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git",
+      "czConfig": "./config/cz.config.js"
+    }
+  },
+  "peerDependencies": {
+    "vue": "^3.5.13"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.14.0",
+    "@csstools/postcss-color-mix-function": "^3.0.7",
+    "@eslint/js": "^9.18.0",
+    "@tsconfig/node22": "^22.0.0",
+    "@types/node": "^22.10.2",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vitejs/plugin-vue-jsx": "^4.1.1",
+    "@vue/test-utils": "^2.4.6",
+    "@vue/tsconfig": "^0.7.0",
+    "commitizen": "^4.3.1",
+    "cz-git": "^1.11.0",
+    "eslint": "^9.18.0",
+    "eslint-plugin-format": "^1.0.1",
+    "eslint-plugin-vue": "^9.32.0",
+    "globals": "^15.14.0",
+    "jsdom": "^26.0.0",
+    "move-file-cli": "^3.0.0",
+    "npm-run-all2": "^7.0.2",
+    "postcss-color-mix": "^1.1.0",
+    "postcss-each": "^1.1.0",
+    "postcss-each-variables": "^0.3.0",
+    "postcss-for": "^2.1.1",
+    "postcss-nested": "^6.0.1",
+    "typescript": "~5.6.3",
+    "typescript-eslint": "^8.20.0",
+    "unplugin-vue-macros": "^2.13.8",
+    "vite": "^6.0.5",
+    "vite-plugin-dts": "^4.5.0",
+    "vite-plugin-vue-devtools": "^7.6.8",
+    "vitest": "^3.0.2",
+    "vue": "^3.5.13",
+    "vue-tsc": "^2.1.10"
+  }
+}

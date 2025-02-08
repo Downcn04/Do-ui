@@ -1,0 +1,15 @@
+.do-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: inherit;
+    --do-icon-color: inherit;
+    fill: currentColor;
+    color: var(--do-icon-color);
+}
+@each $val in primary, success, warning, info, danger {
+    .do-icon--$(val) {
+        --do-icon-color: var(--do-color-$(val));
+    }
+}
